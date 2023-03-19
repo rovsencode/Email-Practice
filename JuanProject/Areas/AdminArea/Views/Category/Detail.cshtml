@@ -1,0 +1,10 @@
+﻿@using JuanProject.Models;
+@model Category
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>@Model.Name</h1>
+<a asp-controller="category" asp-action="index" class="text-dark">Back</a>
+

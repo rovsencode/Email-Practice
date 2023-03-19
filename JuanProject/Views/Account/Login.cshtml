@@ -1,0 +1,29 @@
+﻿@model LoginVM 
+<div class="col-lg-6">
+    <div class="login-reg-form-wrap">
+        <h2>Sign In</h2>
+        <form  method="post">
+            <div class="single-input-item">
+                <input asp-for="UsernameorEmail"  placeholder="Email or Username" required />
+            </div>
+            <div class="single-input-item">
+                <input asp-for="Password" type="password" placeholder="Enter your Password" required />
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+            <div class="single-input-item">
+                <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
+                    <div class="remember-meta">
+                        <div class="custom-control custom-checkbox">
+                            <input asp-for="RememberMe" type="checkbox" class="custom-control-input" id="rememberMe">
+                            <label class="custom-control-label" for="rememberMe">Remember Me</label>
+                        </div>
+                    </div>
+                    <a  class="forget-pwd">Forget Password?</a>
+                </div>
+            </div>
+            <div class="single-input-item">
+                <button class="btn">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

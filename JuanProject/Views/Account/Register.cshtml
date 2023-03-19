@@ -1,0 +1,48 @@
+﻿@model RegisterVM
+<div >
+    <div class="login-reg-form-wrap signup-form">
+        <div class="text-danger mb-2 mt-3" asp-validation-summary="All"></div>
+        <h2>Singup Form</h2>
+        <form  method="post">
+            <div class="single-input-item">
+                <input  asp-for="FullName" type="text" placeholder="Full Name" required />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="single-input-item">
+                <input asp-for="Username" type="text" placeholder="UserName" required />
+                <span asp-validation-for="Username" class="text-danger" ></span>
+            </div>
+            <div class="single-input-item">
+                <input asp-for="Email" type="email" placeholder="Enter your Email" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="single-input-item">
+                        <input asp-for="Password" type="password" placeholder="Enter your Password" required />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-input-item">
+                        <input asp-for="RePassword" type="password" placeholder="Repeat your Password" required />
+                        <span asp-validation-for="RePassword" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-input-item">
+                <div class="login-reg-form-meta">
+                    <div class="remember-meta">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="subnewsletter">
+                            <label class="custom-control-label" for="subnewsletter">Remember me</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-input-item">
+                <button class="btn">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
